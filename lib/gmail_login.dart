@@ -32,14 +32,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text('Rohit Google SignIn Demo'),
       ),
-      body: _currentUser == null
-          ? Center(
-              child: CircularProgressIndicator(),
-            )
-          : Container(
-              alignment: Alignment.center,
-              child: _buildWidget(),
-            ),
+      body: Container(
+        alignment: Alignment.center,
+        child: _buildWidget(),
+      ),
     );
   }
 
@@ -97,14 +93,6 @@ class _HomeState extends State<Home> {
         ),
       );
     }
-  }
-
-  void googleMap() {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => Map_Example(),
-        ));
   }
 
   void signOut() {
