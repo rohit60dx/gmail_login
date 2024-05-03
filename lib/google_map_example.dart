@@ -19,12 +19,13 @@ class Map_ExampleState extends State<Map_Example> {
           backgroundColor: Colors.indigo,
           shadowColor: Colors.black),
       body: GoogleMap(
+        buildingsEnabled: true,
+        polylines: Set(),
         onMapCreated: (GoogleMapController controller) {
           mapController = controller;
         },
         initialCameraPosition: CameraPosition(
           target: LatLng(30.71326846072947, 76.70916551051737),
-
           zoom: 11.0,
         ),
         mapType: MapType.satellite,
